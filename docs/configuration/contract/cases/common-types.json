@@ -1,0 +1,13 @@
+[
+  {"id":"database-ipv6","section":"database","value":{"host":"::1","port":5432,"schema":"training","sslmode":"verify-full"},"valid":true},
+  {"id":"database-pool","section":"database","value":{"host":"localhost","max_open_conns":2,"max_idle_conns":3},"valid":false},
+  {"id":"database-host","section":"database","value":{"host":"https://private-value"},"valid":false},
+  {"id":"web-ipv6","section":"web","value":{"listen_addr":"[::1]:8080","read_timeout":"1m30s"},"valid":true},
+  {"id":"web-port","section":"web","value":{"listen_addr":"localhost:65536"},"valid":false},
+  {"id":"web-timeout","section":"web","value":{"listen_addr":":8080","idle_timeout":"-1s"},"valid":false},
+  {"id":"storage-disabled","section":"object_storage","value":{},"valid":true},
+  {"id":"storage-complete","section":"object_storage","value":{"endpoint":"https://silo.example","bucket":"training","access_key":"private-value","secret_key":"private-value"},"valid":true},
+  {"id":"storage-incomplete","section":"object_storage","value":{"access_key":"private-value"},"valid":false},
+  {"id":"logging-format","section":"logging","value":{"level":"INFO","format":"json"},"valid":true},
+  {"id":"logging-invalid","section":"logging","value":{"format":"private-value"},"valid":false}
+]

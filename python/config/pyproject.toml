@@ -1,0 +1,10 @@
+[project]
+name = "odyssey-config"
+version = "0.1.0"
+description = "Shared typed Python configuration for Odyssey"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.12,<3", "pyyaml>=6.0"]
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13"]
+build-backend = "uv_build"

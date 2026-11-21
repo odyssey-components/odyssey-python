@@ -1,0 +1,9 @@
+[
+  {"id":"profile-layer","files":{"high/app.yaml":"server: {listen_addr: high}","low/app.yaml":"server: {listen_addr: low}","low/app-prod.yaml":"server: {listen_addr: profile}"},"args":["--config-dir=high,low","--profile=prod"],"expected":"profile"},
+  {"id":"subdirectory","files":{"high/app.yaml":"server: {listen_addr: root}","high/config/app.yaml":"server: {listen_addr: nested}","low/app.yaml":"server: {listen_addr: low}"},"args":["--config-dir=high,low"],"expected":"nested"},
+  {"id":"explicit-file","files":{"explicit.yaml":"server: {listen_addr: explicit}","high/app.yaml":"server: {listen_addr: directory}"},"args":["--config=explicit.yaml","--config-dir=high"],"expected":"explicit"},
+  {"id":"duplicate","files":{"high/app.yaml":"{}","high/app.toml":""},"args":["--config-dir=high"],"error":true},
+  {"id":"missing-profile","files":{"high/app.yaml":"{}"},"args":["--config-dir=high","--profile=private-value"],"error":true},
+  {"id":"invalid-layer","files":{"high/app.yaml":"server: {enabled: 'private-value'}","high/app-prod.yaml":"server: {enabled: true}"},"args":["--config-dir=high","--profile=prod"],"error":true},
+  {"id":"typed-overrides","files":{"app.yaml":"server: {listen_addr: base, labels: [base], enabled: false}"},"args":["--config=app.yaml","--server.labels=[\"cli\"]","--server.enabled=1"],"environment":{"APP_SERVER_LABELS":"private-value"},"expected":"base","labels":["cli"],"enabled":true}
+]

@@ -1,0 +1,3 @@
+[server]
+listen_addr = "first"
+listen_addr = "second"

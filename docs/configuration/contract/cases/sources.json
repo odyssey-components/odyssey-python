@@ -1,0 +1,43 @@
+{
+  "defaults": {
+    "server": {
+      "listen_addr": "default",
+      "labels": [
+        "default"
+      ],
+      "enabled": false
+    }
+  },
+  "base": {
+    "server": {
+      "listen_addr": "file",
+      "labels": [
+        "file"
+      ]
+    }
+  },
+  "profile": {
+    "server": {
+      "listen_addr": "profile",
+      "labels": [
+        "profile"
+      ]
+    }
+  },
+  "environment": {
+    "DEMO_SERVER_LISTEN_ADDR": "environment",
+    "DEMO_SERVER_LABELS": "[\"env\"]"
+  },
+  "arguments": {
+    "server.listen_addr": "command"
+  },
+  "expected": {
+    "server": {
+      "listen_addr": "command",
+      "labels": [
+        "env"
+      ],
+      "enabled": false
+    }
+  }
+}

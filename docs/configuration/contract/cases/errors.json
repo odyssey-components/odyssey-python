@@ -1,0 +1,65 @@
+[
+  {
+    "id": "yaml_duplicate",
+    "format": "yaml",
+    "file": "duplicate.yaml"
+  },
+  {
+    "id": "toml_duplicate",
+    "format": "toml",
+    "file": "duplicate.toml"
+  },
+  {
+    "id": "yaml_unknown",
+    "format": "yaml",
+    "file": "unknown.yaml"
+  },
+  {
+    "id": "toml_unknown",
+    "format": "toml",
+    "file": "unknown.toml"
+  },
+  {
+    "id": "format_mismatch",
+    "format": "yaml",
+    "file": "base.toml"
+  },
+  {
+    "id": "profile_missing",
+    "format": "yaml",
+    "file": "base.yaml",
+    "profile": "dev",
+    "profiles": [
+      "dev"
+    ]
+  },
+  {
+    "id": "profile_unknown",
+    "format": "yaml",
+    "file": "base.yaml",
+    "profile": "other",
+    "profiles": [
+      "dev"
+    ]
+  },
+  {
+    "id": "yaml_invalid_type",
+    "format": "yaml",
+    "file": "invalid-type.yaml"
+  },
+  {
+    "id": "toml_invalid_type",
+    "format": "toml",
+    "file": "invalid-type.toml"
+  },
+  {
+    "id": "yaml_string_boolean",
+    "format": "yaml",
+    "file": "string-bool.yaml"
+  },
+  {
+    "id": "toml_string_boolean",
+    "format": "toml",
+    "file": "string-bool.toml"
+  }
+]

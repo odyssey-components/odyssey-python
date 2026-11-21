@@ -1,0 +1,3 @@
+server:
+  listen_addr: first
+  unknown: private-value

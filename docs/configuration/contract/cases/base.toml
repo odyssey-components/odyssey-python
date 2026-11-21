@@ -1,0 +1,3 @@
+[server]
+listen_addr = "file"
+labels = ["file"]

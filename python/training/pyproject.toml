@@ -1,0 +1,16 @@
+[project]
+name = "odylab-training"
+version = "0.1.0"
+description = "Shared, game-neutral training algorithms and worker utilities for OdyLab"
+requires-python = "==3.14.*"
+dependencies = [
+    "odyssey-config==0.1.0",
+  "pydantic>=2,<3",
+]
+
+[project.scripts]
+odylab-training-sync = "odylab_training.sync:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13"]
+build-backend = "uv_build"
